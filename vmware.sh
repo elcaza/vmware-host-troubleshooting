@@ -1,6 +1,6 @@
 #!/bin/bash
-sudo apt install linux-headers-$(uname -r )
-
+sudo apt -y install linux-headers-$(uname -r )
+sudo apt -y install build-essential
 VMWARE_VERSION=`vmware-installer -l |grep workstat|awk '{print $2}' |awk 'BEGIN {FS="."}{print "workstation-"$1"."$2"."$3}'`
 echo $VMWARE_VERSION
 TMP_FOLDER=/tmp/patch-vmware
